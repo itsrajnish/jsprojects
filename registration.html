@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Validation Form</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            padding: 5px;
+
+        }
+
+        body {
+            background-color: skyblue;
+            background-image: url(./4_hi8gmj.png);
+            background-size: cover;
+
+        }
+
+        .container {
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            display: inline;
+        }
+
+        input {
+            padding: 8px;
+            background-color: whitesmoke;
+        }
+
+        select {
+            padding: 8px;
+        }
+
+        button {
+            width: 90px;
+            height: 30px;
+            border-radius: 50px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: brown;
+        }
+
+        #btn {
+            padding-top: 10px;
+
+        }
+
+        #username {
+            color: red;
+        }
+
+        #email {
+            color: red;
+        }
+
+        #contact {
+            color: red;
+        }
+
+        #age {
+            color: red;
+        }
+
+        #pannumber {
+            color: red;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registration Form (Validation)</h1>
+    <form class="container" action="#" onsubmit=" Validation()">
+        <div>
+            Name: <input type="text" id="myName">
+            <p id="username" type="text"></p>
+
+        </div>
+        <br>
+        <div>
+            Email: <input type="text" id="myEmail">
+            <p id="email" type="text"></p>
+        </div>
+        <br>
+        <div>
+            Age: <input type="number" id="myAge">
+            <p id="age" type="text"></p>
+        </div>
+        <br>
+        <div>
+            Gender: <input type="radio" name="myGender" id="male">Male
+            <input type="radio" name="myGender" id="female"> Female
+            <p id="gender" type="radio"></p>
+        </div>
+        <br>
+        <div>
+            Contact: <input type="number" id="myContact">
+            <p id="contact" type="number"></p>
+        </div>
+        <br>
+        <div>About You?
+            <Select id="aboutYou">
+                <option>Select</option>
+                <option>Sudent</option>
+                <option>Teacher</option>
+                <option>Business Man</option>
+                <option>Doctor</option>
+                <option>Goverment Service</option>
+                <option>Unemployee</option>
+            </Select>
+
+        </div>
+        <br>
+        <div>City:
+            <select id="myCity">
+                <option>Select</option>
+                <option>New Delhi</option>
+                <option>Mumbai</option>
+                <option>Pune</option>
+                <option>Banguluru</option>
+                <option>Noida</option>
+                <option>Gurugram</option>
+                <option>Lucknow</option>
+                <option>Paryagraj</option>
+            </select>
+        </div>
+        <br>
+        <div>Countrty:
+            <select id="myCountry">
+                <option>Select</option>
+                <option>India</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            Pan Number: <input type="text" id="myPanNumber">
+            <p id="pannumber" type="number"></p>
+        </div>
+        <br>
+        <div id="btn">
+            <button type="submit">Submit</button>
+            <button type="submit">Reset</button>
+        </div>
+    </form>
+
+
+
+    <script type="text/javascript">
+
+        function Validation() {
+
+            var name = document.getElementById("myName").value;
+            console.log(name)
+            var email = document.getElementById("myEmail").value;
+            console.log(email)
+            var age = document.getElementById("myAge").value;
+            console.log(age)
+            var contact = document.getElementById("myContact").value;
+            console.log(contact)
+            var pannumber = document.getElementById("myPanNumber").value;
+            console.log(pannumber)
+
+
+            if (name == "" || name == 123 ) {
+                document.getElementById("username").innerHTML = "**Name is required";
+            } else {
+                document.getElementById("username").innerHTML = "";
+            }
+
+            if (email == "") {
+                document.getElementById("email").innerHTML = "**Email is required";
+            } else {
+                document.getElementById("email").innerHTML = "";
+            }
+            if (age == "") {
+                document.getElementById("age").innerHTML = "**Age is required";
+            } else {
+                document.getElementById("age").innerHTML = "";
+            }
+            if (contact == "") {
+                document.getElementById("contact").innerHTML = "**Contact is required";
+            } else {
+                document.getElementById("contact").innerHTML = "";
+            }
+            if (pannumber == "") {
+                document.getElementById("pannumber").innerHTML = "**Pan Number is required";
+            } else {
+                document.getElementById("pannumber").innerHTML = "";
+            }
+
+        }
+
+
+        document.getElementById("btn").onclick = function () {
+            var myName = document.getElementById("myName").value;
+            console.log(myName);
+
+            var myEmail = document.getElementById("myEmail").value;
+            console.log(myEmail);
+
+            var myAge = document.getElementById("myAge").value;
+            console.log(myAge);
+
+            var myContact = document.getElementById("myContact").value;
+            console.log(myContact);
+
+
+            var aboutYou = document.getElementById("aboutYou").value;
+            console.log(aboutYou);
+
+
+            var myCity = document.getElementById("myCity").value;
+            console.log(myCity);
+
+            var myCountry = document.getElementById("myCountry").value;
+            console.log(myCountry);
+
+
+            var myPanNumber = document.getElementById("myPanNumber").value;
+            console.log(myPanNumber);
+        }
+    </script>
+</body>
+
+</html>
